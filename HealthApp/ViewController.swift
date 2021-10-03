@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        imageview.image = UIImage(named: "background")
+        imageview.image = UIImage(named: "Overview")
         imageview.contentMode = .scaleToFill
     }
 
