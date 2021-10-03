@@ -10,10 +10,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var imageview: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        imageview.image = UIImage(named: "background")
+        imageview.contentMode = .scaleToFill
     }
 
 
