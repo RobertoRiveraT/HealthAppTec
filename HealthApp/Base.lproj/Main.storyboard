@@ -36,6 +36,210 @@
             </objects>
             <point key="canvasLocation" x="1114.4927536231885" y="42.857142857142854"/>
         </scene>
+        <!--Noticias-->
+        <scene sceneID="aXr-X1-Nkf">
+            <objects>
+                <viewController id="Lw6-qs-IGD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IPu-SZ-OGU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JSON de Noticias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atg-k6-GYd">
+                                <rect key="frame" x="140" y="44" width="134" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Noticias (json)" translatesAutoresizingMaskIntoConstraints="NO" id="hYY-sD-gQD">
+                                <rect key="frame" x="20" y="134" width="374" height="550"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="chz-Q0-dO3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Noticias" image="newspaper" catalog="system" id="i9C-S4-NLC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qlo-Kf-ddK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653.6231884057972" y="792.85714285714278"/>
+        </scene>
+        <!--Mis Reportes JSON-->
+        <scene sceneID="GRy-jE-iJ2">
+            <objects>
+                <viewController id="U1u-fz-gR4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C3u-2z-HkG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" text="" translatesAutoresizingMaskIntoConstraints="NO" id="Ryw-hk-CaN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reporte-1" translatesAutoresizingMaskIntoConstraints="NO" id="FWu-dY-F7t">
+                                <rect key="frame" x="10" y="132" width="394" height="608"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAT-SL-Uog">
+                                <rect key="frame" x="38" y="193" width="356" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="Qtd-J6-jgg" kind="show" id="cRR-yu-cUS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wg7-8q-7FW">
+                                <rect key="frame" x="165" y="698" width="103" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Nuevo Reporte"/>
+                                <connections>
+                                    <segue destination="bey-uk-NJx" kind="presentation" modalPresentationStyle="fullScreen" id="foJ-3f-drh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RKT-iU-ILU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mis Reportes JSON" id="GT3-Pl-LHU"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHH-i8-umb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2562.3188405797105" y="1475.8928571428571"/>
+        </scene>
+        <!--Detalle de reporte-->
+        <scene sceneID="HzC-JX-ZUL">
+            <objects>
+                <viewController title="Detalle de reporte" id="bey-uk-NJx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nkg-ab-nRl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Nuevo reporte" translatesAutoresizingMaskIntoConstraints="NO" id="6pq-Xs-9j9">
+                                <rect key="frame" x="0.0" y="40" width="422" height="816"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocv-BT-CSW">
+                                <rect key="frame" x="293" y="77" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Emergencia">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="oaG-Xk-eHN" kind="presentation" modalPresentationStyle="fullScreen" id="LC7-u6-fVp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYu-Gl-xw2">
+                                <rect key="frame" x="12" y="77" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Regresar"/>
+                                <connections>
+                                    <segue destination="YOF-nn-AeU" kind="presentation" modalPresentationStyle="fullScreen" id="iJb-sG-22a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="etp-Nj-jNw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Neq-pz-BDo">
+                        <barButtonItem key="rightBarButtonItem" title="Hospital" image="cross.case" catalog="system" style="plain" id="kX4-bF-sh0">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="LMS-Il-5jh">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lq6-di-wE4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3437.68115942029" y="1485.9375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vtc-K8-idF">
+            <objects>
+                <viewController id="oaG-Xk-eHN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ve-Fn-S9g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XWV-za-R7e">
+                                <rect key="frame" x="20" y="60" width="374" height="334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBf-M0-2pq">
+                                <rect key="frame" x="159" y="418" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Abrir en Waze"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rk7-4o-b2g">
+                                <rect key="frame" x="177" y="456" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="0.62888546779999999" green="0.67307366120000001" blue="0.68134715030000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bey-uk-NJx" kind="presentation" modalPresentationStyle="fullScreen" id="yEd-Ci-Fip"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Txt-8C-D2B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gyo-s5-gzM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4363.768115942029" y="1493.9732142857142"/>
+        </scene>
+        <!--Detalle Reportes-->
+        <scene sceneID="RSu-it-Iza">
+            <objects>
+                <viewController title="Detalle Reportes" id="Qtd-J6-jgg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wtt-gM-6o9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detalle de reporte unico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1T-Cc-Zsj">
+                                <rect key="frame" x="54" y="108" width="306" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BDk-iS-5Gs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PaR-IM-ehz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ww1-iU-5eH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3474" y="2195"/>
+        </scene>
+        <!--Perfil-->
+        <scene sceneID="s7h-Sr-00e">
+            <objects>
+                <viewController id="pWg-ct-daQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6bb-sd-GSf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mi cuenta-1" translatesAutoresizingMaskIntoConstraints="NO" id="bED-a2-L2y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gmg-s9-I71"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="person" catalog="system" id="Hwy-Ch-FrQ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ay-Fr-ITK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653.6231884057972" y="2149.5535714285711"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="iHT-QL-BVw">
             <objects>
@@ -161,10 +365,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC5-Zu-T23">
-                                <rect key="frame" x="73" y="658" width="249" height="49"/>
+                                <rect key="frame" x="73" y="651" width="249" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="Fgt-ta-UZD" kind="presentation" modalPresentationStyle="fullScreen" id="vXA-Vk-M6J"/>
+                                    <segue destination="YOF-nn-AeU" kind="presentation" modalPresentationStyle="fullScreen" id="gEr-1g-U8f"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -176,126 +380,71 @@
             </objects>
             <point key="canvasLocation" x="5018.840579710145" y="49.553571428571423"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ao9-la-6qX">
+        <!--Tab Bar Controller-->
+        <scene sceneID="TNV-cX-TG2">
             <objects>
-                <viewController id="c8O-7l-o4Y" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="T7r-Bf-vJ2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Reporte" translatesAutoresizingMaskIntoConstraints="NO" id="BR3-X7-TgO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="hwY-zz-oT0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c3D-jr-YVA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YOF-nn-AeU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Za-Sq-fkn">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Lw6-qs-IGD" kind="relationship" relationship="viewControllers" id="mwm-gY-SkE"/>
+                        <segue destination="j98-eD-SKY" kind="relationship" relationship="viewControllers" id="fdO-yL-psR"/>
+                        <segue destination="pWg-ct-daQ" kind="relationship" relationship="viewControllers" id="00v-OX-oBW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dV7-Xk-GCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1850.7246376811595" y="774.77678571428567"/>
+            <point key="canvasLocation" x="830" y="801"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="P0U-gJ-xwZ">
+        <!--Reportes-->
+        <scene sceneID="DR6-gu-K9j">
             <objects>
-                <viewController id="Fgt-ta-UZD" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="02z-SF-PIF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Noticias (json)" translatesAutoresizingMaskIntoConstraints="NO" id="4QV-po-SNZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="KVa-09-fM8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lhe-HG-ru3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j98-eD-SKY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reportes" image="doc.append.fill.rtl" catalog="system" id="aPI-Kc-bB6"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Efi-We-3hS"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tLy-Km-71n">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="U1u-fz-gR4" kind="relationship" relationship="rootViewController" id="XDM-8j-jqr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPW-Yo-S0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="775"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="B9J-fb-w3l">
-            <objects>
-                <viewController id="y0e-7Q-b6K" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ege-hV-sfn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mi cuenta" translatesAutoresizingMaskIntoConstraints="NO" id="xZR-n6-WDG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="tLk-Wa-aLF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nrw-7X-hf1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1113.0434782608697" y="1445.7589285714284"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Ley-S8-kdD">
-            <objects>
-                <viewController id="ZxT-UJ-dPe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="guB-0T-TxL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Reporte Vacunas" translatesAutoresizingMaskIntoConstraints="NO" id="gsE-k3-cC6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="wwD-w6-1ir"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JMp-Ic-9Ra" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1850.7246376811595" y="1445.7589285714284"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="1SM-8h-CAX">
-            <objects>
-                <viewController id="AEg-VQ-bgg" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5fd-WB-a8I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mapa Hospitales" translatesAutoresizingMaskIntoConstraints="NO" id="Sp9-Vx-GBI">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ctl-Ol-WP7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Sc-7U-Eub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2619" y="775"/>
+            <point key="canvasLocation" x="1653.6231884057972" y="1475.8928571428571"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LC7-u6-fVp"/>
+        <segue reference="iJb-sG-22a"/>
+        <segue reference="yEd-Ci-Fip"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Login in" width="369" height="721"/>
-        <image name="Mapa Hospitales" width="298" height="710"/>
-        <image name="Mi cuenta" width="345" height="739"/>
+        <image name="Mi cuenta-1" width="373" height="602"/>
         <image name="Noticias (json)" width="375" height="678"/>
+        <image name="Nuevo reporte" width="376" height="692"/>
         <image name="Overview-1" width="367" height="742"/>
         <image name="Overview-3" width="367" height="718"/>
         <image name="Overview-4" width="348" height="751"/>
         <image name="Overvirew-2" width="366" height="704"/>
-        <image name="Reporte" width="344" height="734"/>
-        <image name="Reporte Vacunas" width="341" height="734"/>
         <image name="Sign_in" width="369" height="734"/>
+        <image name="cross.case" catalog="system" width="128" height="98"/>
+        <image name="doc.append.fill.rtl" catalog="system" width="115" height="128"/>
+        <image name="newspaper" catalog="system" width="128" height="108"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="reporte-1" width="380" height="470"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
