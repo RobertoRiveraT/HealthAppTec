@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18016305B022FCB2D64232A9 /* Pods_HealthApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0E3890DDA2B03D80734F90 /* Pods_HealthApp.framework */; };
 		2C09D605270BFDF500B69C08 /* ReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09D604270BFDF500B69C08 /* ReportsTableViewController.swift */; };
 		2C176274270BDCB6002A0AB3 /* Reports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C176273270BDCB6002A0AB3 /* Reports.swift */; };
 		2C176277270BE414002A0AB3 /* ReportsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C176276270BE414002A0AB3 /* ReportsController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22C98F702861961A33AB213A /* Pods-HealthApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.release.xcconfig"; path = "Target Support Files/Pods-HealthApp/Pods-HealthApp.release.xcconfig"; sourceTree = "<group>"; };
 		2C09D604270BFDF500B69C08 /* ReportsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsTableViewController.swift; sourceTree = "<group>"; };
 		2C176273270BDCB6002A0AB3 /* Reports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reports.swift; sourceTree = "<group>"; };
 		2C176276270BE414002A0AB3 /* ReportsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsController.swift; sourceTree = "<group>"; };
@@ -33,6 +35,7 @@
 		A5F1CAA5270B57EE00880013 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5F1CAA9270B586600880013 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		A5F1CAAD270B589600880013 /* NoticiaControlador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiaControlador.swift; sourceTree = "<group>"; };
+		AAB8B9410D8A6C7AFC95F4AF /* Pods-HealthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.debug.xcconfig"; path = "Target Support Files/Pods-HealthApp/Pods-HealthApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C50390C027051C6000CC7A6C /* HealthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50390C327051C6000CC7A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C50390C527051C6000CC7A6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		C50390CF27051C6700CC7A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C50390D127051C6700CC7A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5C6E038272F40D200AFA63D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE0E3890DDA2B03D80734F90 /* Pods_HealthApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18016305B022FCB2D64232A9 /* Pods_HealthApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,24 @@
 				2C09D604270BFDF500B69C08 /* ReportsTableViewController.swift */,
 			);
 			path = Reports;
+			sourceTree = "<group>";
+		};
+		3C94B1097A49B5766CE520B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAB8B9410D8A6C7AFC95F4AF /* Pods-HealthApp.debug.xcconfig */,
+				22C98F702861961A33AB213A /* Pods-HealthApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		978BFACA4D39D09DB2B8BAAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E3890DDA2B03D80734F90 /* Pods_HealthApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A5F1CAA8270B584D00880013 /* News */ = {
@@ -82,6 +105,8 @@
 			children = (
 				C50390C227051C6000CC7A6C /* HealthApp */,
 				C50390C127051C6000CC7A6C /* Products */,
+				3C94B1097A49B5766CE520B5 /* Pods */,
+				978BFACA4D39D09DB2B8BAAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C50390D427051C6700CC7A6C /* Build configuration list for PBXNativeTarget "HealthApp" */;
 			buildPhases = (
+				772B6123ABE391E7819EA1DE /* [CP] Check Pods Manifest.lock */,
 				C50390BC27051C6000CC7A6C /* Sources */,
 				C50390BD27051C6000CC7A6C /* Frameworks */,
 				C50390BE27051C6000CC7A6C /* Resources */,
+				6A6299AE0E29AE1F1AA62333 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,6 +202,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A6299AE0E29AE1F1AA62333 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthApp/Pods-HealthApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthApp/Pods-HealthApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HealthApp/Pods-HealthApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		772B6123ABE391E7819EA1DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C50390BC27051C6000CC7A6C /* Sources */ = {
@@ -335,6 +404,7 @@
 		};
 		C50390D527051C6700CC7A6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAB8B9410D8A6C7AFC95F4AF /* Pods-HealthApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -353,6 +423,7 @@
 		};
 		C50390D627051C6700CC7A6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22C98F702861961A33AB213A /* Pods-HealthApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
