@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tt0-ZF-SPi">
             <objects>
-                <viewController id="9lp-BB-XRG" sceneMemberID="viewController">
+                <viewController id="9lp-BB-XRG" customClass="startViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w6J-xF-if7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -351,7 +351,7 @@
             </objects>
             <point key="canvasLocation" x="4668" y="1398"/>
         </scene>
-        <!--Mis Reportes JSON-->
+        <!--Mis Reportes-->
         <scene sceneID="DDu-Rb-aMW">
             <objects>
                 <tableViewController id="URr-zb-Aam" customClass="ReportsTableViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -377,7 +377,7 @@
                             <outlet property="delegate" destination="URr-zb-Aam" id="cU9-nk-zjc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Mis Reportes JSON" id="Pts-sl-NN1">
+                    <navigationItem key="navigationItem" title="Mis Reportes" id="Pts-sl-NN1">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="1qd-mk-4AK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="y39-Iy-8NO">
                                 <rect key="frame" x="291" y="7" width="103" height="30"/>
@@ -572,6 +572,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gh-VP-xJm">
+                                <rect key="frame" x="176" y="666" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="About us"/>
+                                <connections>
+                                    <segue destination="v6K-SB-C9G" kind="presentation" modalPresentationStyle="fullScreen" id="xlP-sd-ScS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gmg-s9-I71"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -581,7 +589,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ay-Fr-ITK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1619" y="1489"/>
+            <point key="canvasLocation" x="1114" y="1515"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6x6-Q5-wKk">
@@ -591,14 +599,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutus" translatesAutoresizingMaskIntoConstraints="NO" id="nRc-fZ-iJA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutus-1" translatesAutoresizingMaskIntoConstraints="NO" id="nRc-fZ-iJA">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hC-fS-K6h">
                                 <rect key="frame" x="87" y="757" width="234" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="98r-WZ-p0Z" kind="presentation" modalPresentationStyle="fullScreen" id="05H-nX-27G"/>
+                                    <segue destination="YOF-nn-AeU" kind="presentation" modalPresentationStyle="fullScreen" id="KB2-6r-lFk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -614,7 +622,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k41-DA-87D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4243.4782608695659" y="42.857142857142854"/>
+            <point key="canvasLocation" x="2309" y="1535"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iHT-QL-BVw">
@@ -697,7 +705,7 @@
                                 <rect key="frame" x="89" y="759" width="247" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="v6K-SB-C9G" kind="presentation" modalPresentationStyle="fullScreen" id="6Q0-Fs-cfu"/>
+                                    <segue destination="98r-WZ-p0Z" kind="presentation" modalPresentationStyle="fullScreen" id="Hgw-Hq-Gc9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -752,7 +760,11 @@
         <!--Login View Controller-->
         <scene sceneID="C5I-gS-ug9">
             <objects>
+
+                <viewController storyboardIdentifier="loginView" id="Uft-FB-G1f" sceneMemberID="viewController">
+
                 <viewController id="Uft-FB-G1f" customClass="LoginViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+
                     <view key="view" contentMode="scaleToFill" id="gJG-EV-4R0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -841,7 +853,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gEr-1g-U8f"/>
+        <segue reference="iJb-sG-22a"/>
         <segue reference="LC7-u6-fVp"/>
         <segue reference="rRC-bS-772"/>
     </inferredMetricsTieBreakers>
@@ -853,7 +865,7 @@
         <image name="Overview-3" width="367" height="718"/>
         <image name="Overvirew-2" width="366" height="704"/>
         <image name="Sign_in" width="369" height="734"/>
-        <image name="aboutus" width="361" height="764"/>
+        <image name="aboutus-1" width="258" height="568"/>
         <image name="cross.case" catalog="system" width="128" height="98"/>
         <image name="doc.plaintext.fill" catalog="system" width="115" height="128"/>
         <image name="iconSplash" width="1457" height="1457"/>
