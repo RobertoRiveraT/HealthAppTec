@@ -749,10 +749,10 @@
             </objects>
             <point key="canvasLocation" x="5070" y="43"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="C5I-gS-ug9">
             <objects>
-                <viewController id="Uft-FB-G1f" sceneMemberID="viewController">
+                <viewController id="Uft-FB-G1f" customClass="LoginViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gJG-EV-4R0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -767,6 +767,18 @@
                                     <segue destination="YOF-nn-AeU" kind="presentation" modalPresentationStyle="fullScreen" id="gEr-1g-U8f"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bXg-W3-kxG">
+                                <rect key="frame" x="57" y="352" width="300" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="onp-NI-qqD">
+                                <rect key="frame" x="57" y="461" width="300" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lZT-ij-7un"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -777,10 +789,15 @@
                             <constraint firstItem="lZT-ij-7un" firstAttribute="trailing" secondItem="Mfd-7t-VCJ" secondAttribute="trailing" constant="15" id="upy-0G-iaW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="bXg-W3-kxG" id="YAT-IF-Rv0"/>
+                        <outlet property="logInButton" destination="yC5-Zu-T23" id="CiA-iV-ghe"/>
+                        <outlet property="passwordTextField" destination="onp-NI-qqD" id="YJA-1i-7y3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ud1-fU-8Ea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5864" y="43"/>
+            <point key="canvasLocation" x="5862.3188405797109" y="42.857142857142854"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TNV-cX-TG2">

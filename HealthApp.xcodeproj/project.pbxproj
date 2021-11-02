@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,8 @@
 		C50390CB27051C6000CC7A6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50390C927051C6000CC7A6C /* Main.storyboard */; };
 		C50390CD27051C6700CC7A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50390CC27051C6700CC7A6C /* Assets.xcassets */; };
 		C50390D027051C6700CC7A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50390CE27051C6700CC7A6C /* LaunchScreen.storyboard */; };
+		C52384FC2730CB16006C3D41 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52384FB2730CB16006C3D41 /* RegisterViewController.swift */; };
+		C52384FF2730CB83006C3D41 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52384FE2730CB83006C3D41 /* LoginViewController.swift */; };
 		C5C6E039272F40D200AFA63D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5C6E038272F40D200AFA63D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		C50390CC27051C6700CC7A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C50390CF27051C6700CC7A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C50390D127051C6700CC7A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C52384FB2730CB16006C3D41 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C52384FE2730CB83006C3D41 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C5C6E038272F40D200AFA63D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE0E3890DDA2B03D80734F90 /* Pods_HealthApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,7 +81,6 @@
 				AAB8B9410D8A6C7AFC95F4AF /* Pods-HealthApp.debug.xcconfig */,
 				22C98F702861961A33AB213A /* Pods-HealthApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -126,6 +129,8 @@
 				C50390C327051C6000CC7A6C /* AppDelegate.swift */,
 				C50390C527051C6000CC7A6C /* SceneDelegate.swift */,
 				C50390C727051C6000CC7A6C /* ViewController.swift */,
+				C52384FB2730CB16006C3D41 /* RegisterViewController.swift */,
+				C52384FE2730CB83006C3D41 /* LoginViewController.swift */,
 				C50390C927051C6000CC7A6C /* Main.storyboard */,
 				C50390CC27051C6700CC7A6C /* Assets.xcassets */,
 				C50390CE27051C6700CC7A6C /* LaunchScreen.storyboard */,
@@ -253,6 +258,7 @@
 				A5F1CAAE270B589600880013 /* NoticiaControlador.swift in Sources */,
 				A5F1CAAA270B586600880013 /* News.swift in Sources */,
 				C50390C827051C6000CC7A6C /* ViewController.swift in Sources */,
+				C52384FC2730CB16006C3D41 /* RegisterViewController.swift in Sources */,
 				C50390C427051C6000CC7A6C /* AppDelegate.swift in Sources */,
 				2C176277270BE414002A0AB3 /* ReportsController.swift in Sources */,
 				C50390C627051C6000CC7A6C /* SceneDelegate.swift in Sources */,
@@ -260,6 +266,7 @@
 				A5F1CA9F270B571B00880013 /* NewsViewController.swift in Sources */,
 				A5F1CAA6270B57EE00880013 /* NewsCollectionViewCell.swift in Sources */,
 				2C176274270BDCB6002A0AB3 /* Reports.swift in Sources */,
+				C52384FF2730CB83006C3D41 /* LoginViewController.swift in Sources */,
 				2C09D605270BFDF500B69C08 /* ReportsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
