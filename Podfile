@@ -5,7 +5,12 @@ target 'HealthApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'Firebase/Firestore'  # Optionally, include the Swift extensions if you're using Swift.  pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/Firestore'
+
+  pod 'Firebase/Auth'
+
+  # Optionally, include the Swift extensions if you're using Swift.
+  pod 'FirebaseFirestoreSwift'
 
   # Pods for HealthApp
 

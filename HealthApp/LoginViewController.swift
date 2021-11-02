@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -21,6 +22,8 @@ class LoginViewController: UIViewController {
     }
     
 
+    @IBAction func logInButtonAction(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
