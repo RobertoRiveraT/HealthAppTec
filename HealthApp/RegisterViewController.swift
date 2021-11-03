@@ -33,7 +33,10 @@ class RegisterViewController: UIViewController {
                     print("Auth correct")
                     self.performSegue(withIdentifier: "homePageSegue", sender: nil)
 //                    self.navigationController?.pushViewController(NewsViewController, animated: true)
-                    
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "homePage") as! NewsViewController
+                    nextViewController.modalPresentationStyle = .fullScreen
+                    self.present(nextViewController, animated:true, completion:nil)
                 }else{
                     print("Auth failed")
                     let alertController = UIAlertController(title: "Error",

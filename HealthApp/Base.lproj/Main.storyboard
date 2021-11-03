@@ -77,7 +77,7 @@
         <!--Noticias-->
         <scene sceneID="aXr-X1-Nkf">
             <objects>
-                <viewController id="Lw6-qs-IGD" customClass="NewsViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homePage" id="Lw6-qs-IGD" customClass="NewsViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IPu-SZ-OGU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -892,6 +892,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="1UC-iv-koF"/>
         <segue reference="iJb-sG-22a"/>
         <segue reference="LC7-u6-fVp"/>
         <segue reference="rRC-bS-772"/>

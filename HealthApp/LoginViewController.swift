@@ -31,8 +31,10 @@ class LoginViewController: UIViewController {
                 
                 if let result = result, error == nil {
                     print("Auth correct")
-                    self.performSegue(withIdentifier: "homePageSegue", sender: nil)
-//                    self.navigationController?.pushViewController(NewsViewController, animated: true)
+                    let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "homePage") as! NewsViewController
+                    nextViewController.modalPresentationStyle = .fullScreen
+                    self.present(nextViewController, animated:true, completion:nil)
                     
                 }else{
                     print("Auth failed")
