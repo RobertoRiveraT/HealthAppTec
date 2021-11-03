@@ -17,6 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         let defaults = UserDefaults.standard
+        if let tabBarController = self.window?.rootViewController as? UITabBarController {
+            tabBarController.selectedIndex = 1
+        }
         if defaults.bool(forKey: "isSecondTime") == true {
             print("Second+")
             defaults.setValue(true, forKey:"isSecondTime")

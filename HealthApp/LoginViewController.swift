@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+// Auth.auth
     @IBAction func logInButtonAction(_ sender: Any) {
         
         if let email = emailTextField.text, let password = passwordTextField.text {
@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
                 if let result = result, error == nil {
                     print("Auth correct")
                     let storyBoard = UIStoryboard(name: "Main", bundle:nil)
-                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "homePage") as! NewsViewController
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "homePage") as! UITabBarController
                     nextViewController.modalPresentationStyle = .fullScreen
                     self.present(nextViewController, animated:true, completion:nil)
                     
