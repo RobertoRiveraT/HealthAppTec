@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let defaults = UserDefaults.standard
         if defaults.bool(forKey: "isSecondTime") == true {
             print("Second+")
-            defaults.setValue(true, forKey:"isSecondTime")
+            defaults.setValue(false, forKey:"isSecondTime")
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "loginView")
