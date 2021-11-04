@@ -9,7 +9,7 @@ import UIKit
 
 class agregarReportesViewController: UIViewController {
 
-   let reporteControlador = ReportesControlador()
+   let reporteControlador = ReportsController()
     
     @IBOutlet weak var nombreR: UITextField!
     
@@ -31,10 +31,9 @@ class agregarReportesViewController: UIViewController {
     
     
     
-    @IBAction func registrarV(_ sender: UIButton) {
-        
-        var nuevoReporte = Report(nombre: nombreR.text!, nombreVacuna: vacunaNomb.text!, fechaUltimaVacuna: fecha.text!, numeroDosis: Int(numDosis.text!)!, dolorCabeza: dolorCabeza.isOn, fiebre: fiebre.isOn, cuerpoCortado: cuerpoCortado.isOn, congestionNasal: Congnasal.isOn, otro:otroEf.text!)
-        
+	@IBAction func crearReporte(_ sender: UIButton) {
+		let nuevoReporte = Report(nombre: nombreR.text!, nombreVacuna: vacunaNomb.text!, fechaUltimaVacuna: fecha.text!, numeroDosis: Int(numDosis.text!)!, dolorCabeza: dolorCabeza.isOn, fiebre: fiebre.isOn, cuerpoCortado: cuerpoCortado.isOn, congestionNasal: Congnasal.isOn, otro:otroEf.text!)
+	
         reporteControlador.insertReporte(nuevoReporte: nuevoReporte){
             (resultado) in
             switch resultado{
@@ -45,8 +44,8 @@ class agregarReportesViewController: UIViewController {
             }
         }
 
-            
-        }
+		
+	}
     
     func displayError(e:Error){
         DispatchQueue.main.async {

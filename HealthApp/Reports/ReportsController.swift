@@ -37,6 +37,28 @@ class ReportsController {
 //
 //}
 
+	func insertReporte(nuevoReporte:Report, completion: @escaping (Result<String, Error>) -> Void){
+			
+			var ref: DocumentReference? = nil
+			ref = db.collection("reportes").addDocument(data: [
+					"nombre":nuevoReporte.nombre,
+					"nombre_vacuna":nuevoReporte.nombreVacuna,
+					"fechaUltimaVacuna":nuevoReporte.fechaUltimaVacuna,
+					"numeroDosis":nuevoReporte.numeroDosis,
+					"dolorCabeza":nuevoReporte.dolorCabeza,
+					"fiebre":nuevoReporte.fiebre,
+					"cuerpoCortado":nuevoReporte.cuerpoCortado,
+					"congestionNasal":nuevoReporte.congestionNasal,
+					"otro":nuevoReporte.otro,
+			]) { err in
+					if let err = err {
+							print("Error adding document: \(err)")
+							completion(.failure(err))
+					} else {
+							completion(.success("Documento agregado ID: \(ref!.documentID)"))
+					}
+			}
+	}
     
     func fetchReports(completion: @escaping (Result<Reports,Error>)->Void){
         var lista_reportes = [Report]()
@@ -47,11 +69,40 @@ class ReportsController {
                 completion(.failure(err))
             } else {
                 for document in querySnapshot!.documents {
-                    var r = Report(d: document)
+                    let r = Report(d: document)
                     lista_reportes.append(r)
                 }
                 completion(.success(lista_reportes))
             }
         }
     }
+	
+	
+ /*
+	
+	func updateRazas(razaActualizada: Raza,completion: @escaping (Result<String,Error>)->Void){
+			db.collection("razas").document(razaActualizada.id).updateData([
+																																			"descripcion":razaActualizada.descripcion]){ err in
+					if let err = err {
+							completion(.failure(err))
+					} else{
+							completion(.success("Registro modificado"))
+					}
+					
+			}
+	}
+	
+	*/
+	func deleteReporte(registroID:String, completion: @escaping (Result<String, Error>) -> Void){
+			
+			db.collection("reportes").document(registroID).delete() { err in
+					if let err = err {
+							print("Error removing document: \(err)")
+							completion(.failure(err))
+					} else {
+							print("Document successfully removed!")
+							completion(.success("Document successfully removed!"))
+					}
+			}
+	}
 }

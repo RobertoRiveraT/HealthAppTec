@@ -15,25 +15,19 @@ class ReportsTableViewController: UITableViewController, UISearchResultsUpdating
     let searchController = UISearchController(searchResultsController: nil)
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        reportController.fetchReports{(resultado) in
-            switch resultado{
-            case .success(let reportList):
-                self.updateGUI(reportList: reportList)
-            case .failure(let err):
-                self.displayError(err: err)
-            }
-        }
+			self.updateGUI()
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
         tableView.tableHeaderView = searchController.searchBar
     }
+	override func viewDidAppear(_ animated: Bool) {
+		self.updateGUI()
+	}
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.searchController.searchBar.isHidden = false
@@ -57,12 +51,20 @@ class ReportsTableViewController: UITableViewController, UISearchResultsUpdating
     }
     
     
-    func updateGUI(reportList: Reports){
-        DispatchQueue.main.sync {
-            self.data = reportList
-            self.datosFiltrados = reportList
-            self.tableView.reloadData()
-        }
+    func updateGUI(){
+			reportController.fetchReports{(resultado) in
+					switch resultado{
+					case .success(let reportList):
+						DispatchQueue.main.async {
+									self.data = reportList
+									self.datosFiltrados = reportList
+									self.tableView.reloadData()
+							}
+					case .failure(let err):
+							self.displayError(err: err)
+					}
+			}
+			
     }
     
     func displayError(err: Error){
@@ -82,7 +84,7 @@ class ReportsTableViewController: UITableViewController, UISearchResultsUpdating
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print("Number of rows ", data.count)
+//        print("Number of rows ", data.count)
         return datosFiltrados.count
     }
 
@@ -106,5 +108,22 @@ class ReportsTableViewController: UITableViewController, UISearchResultsUpdating
             siguiente.report = datosFiltrados[indice!]
         }
     }
+	
+	@IBAction func editTable(_ sender: UIBarButtonItem) {
+		let modoEdicion = self.tableView.isEditing
+		self.tableView.setEditing(!modoEdicion, animated: true)
+	}
+	
+	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+		if editingStyle == .delete {
+			reportController.deleteReporte(registroID: datosFiltrados[indexPath.row].id){
+				(resultado) in
+				switch resultado{
+				case.success( _): self.updateGUI()
+				case .failure(let error): self.displayError(err: error)
+				}
+			}
+		}
+	}
 }
 
