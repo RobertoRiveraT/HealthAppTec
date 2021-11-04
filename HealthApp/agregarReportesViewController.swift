@@ -57,7 +57,7 @@ class agregarReportesViewController: UIViewController {
     }
     func displayExito(exito:String ){
         DispatchQueue.main.async {
-            let alerta =  UIAlertController(title: "Raza creada en BD", message: exito, preferredStyle: .alert)
+            let alerta =  UIAlertController(title: "Reporte creada en BD", message: exito, preferredStyle: .alert)
             alerta.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: self.terminacion))
             self.present(alerta, animated: true, completion: nil)
            
