@@ -12,27 +12,34 @@ struct Report: Codable {
 		let nombre, nombreVacuna, fechaUltimaVacuna: String
 		let numeroDosis: Int
 		let dolorCabeza, fiebre, cuerpoCortado, congestionNasal: Bool
-		let imagen: [Imagen]
 		let otro: String
 
 		enum CodingKeys: String, CodingKey {
-				case nombre
+				case nombre = "nombre"
 				case nombreVacuna = "nombre_vacuna"
 				case fechaUltimaVacuna = "fecha_ultima_vacuna"
 				case numeroDosis = "numero_dosis"
-				case dolorCabeza = "dolor_cabeza"
-				case fiebre
+				case dolorCabeza = "dolorCabeza"
+				case fiebre = "fiebre"
 				case cuerpoCortado = "cuerpo_cortado"
 				case congestionNasal = "congestion_nasal"
-				case imagen, otro
+				case otro = "otro"
 		}
+    
+    init(nombre:String, nombreVacuna:String, fechaUltimaVacuna:String, numeroDosis: Int,
+         dolorCabeza: Bool, fiebre: Bool, cuerpoCortado: Bool, congestionNasal: Bool, otro:String) {
+        self.nombre = nombre
+        self.nombreVacuna = nombreVacuna
+        self.fechaUltimaVacuna = fechaUltimaVacuna
+        self.numeroDosis = numeroDosis
+        self.dolorCabeza = dolorCabeza
+        self.fiebre = fiebre
+        self.cuerpoCortado = cuerpoCortado
+        self.congestionNasal = congestionNasal
+        self.otro = otro
+    }
 }
 
 // MARK: - Imagen
-struct Imagen: Codable {
-		let nombre: String
-		let url: String
-		let medicamento: String
-}
 
 typealias Reports = [Report]
