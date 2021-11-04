@@ -33,12 +33,42 @@ class agregarReportesViewController: UIViewController {
     
     @IBAction func registrarV(_ sender: UIButton) {
         
-        var nuevoReporte = Report(from: Report as! Decoder, nombre: nombreR.text!, nombreVacuna:vacunaNomb.text!, fechaUltimaVacuna:fecha.text!, numeroDosis:numDosis.text!, dolorCabeza:dolorCabeza, fiebre:fiebre, cuerpoCortado:cuerpoCortado, Congnasal:Congnasal,otroEfecto: otroEf.text!)
+        var nuevoReporte = Report(nombre: nombreR.text!, nombreVacuna: vacunaNomb.text!, fechaUltimaVacuna: fecha.text!, numeroDosis: Int(numDosis.text!)!, dolorCabeza: dolorCabeza.isOn, fiebre: fiebre.isOn, cuerpoCortado: cuerpoCortado.isOn, congestionNasal: Congnasal.isOn, otro:otroEf.text!)
         
         reporteControlador.insertReporte(nuevoReporte: nuevoReporte){
-            
+            (resultado) in
+            switch resultado{
+            case .success(let exito):
+                self.displayExito(exito: exito)
+            case .failure(let err):
+                self.displayError(e: err)
             }
         }
+
+            
+        }
+    
+    func displayError(e:Error){
+        DispatchQueue.main.async {
+            let alerta =  UIAlertController(title: "Error de creación en BD", message: e.localizedDescription, preferredStyle: .alert)
+            alerta.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: self.terminacion))
+            self.present(alerta, animated: true, completion: nil)
+
+        }
+    }
+    func displayExito(exito:String ){
+        DispatchQueue.main.async {
+            let alerta =  UIAlertController(title: "Raza creada en BD", message: exito, preferredStyle: .alert)
+            alerta.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: self.terminacion))
+            self.present(alerta, animated: true, completion: nil)
+           
+        }
+    }
+    
+    func terminacion(alert: UIAlertAction!){
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
