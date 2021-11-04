@@ -29,6 +29,20 @@ struct Report: Codable {
 				case otro = "otro"
 		}
     
+    init(id:String, nombre:String, nombreVacuna:String, fechaUltimaVacuna:String, numeroDosis: Int,
+         dolorCabeza: Bool, fiebre: Bool, cuerpoCortado: Bool, congestionNasal: Bool, otro:String) {
+        self.nombre = nombre
+        self.nombreVacuna = nombreVacuna
+        self.fechaUltimaVacuna = fechaUltimaVacuna
+        self.numeroDosis = numeroDosis
+        self.dolorCabeza = dolorCabeza
+        self.fiebre = fiebre
+        self.cuerpoCortado = cuerpoCortado
+        self.congestionNasal = congestionNasal
+        self.otro = otro
+        self.id = id
+    }
+    
     init(nombre:String, nombreVacuna:String, fechaUltimaVacuna:String, numeroDosis: Int,
          dolorCabeza: Bool, fiebre: Bool, cuerpoCortado: Bool, congestionNasal: Bool, otro:String) {
         self.nombre = nombre

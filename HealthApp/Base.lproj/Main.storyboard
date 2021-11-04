@@ -523,7 +523,7 @@
         <!--Mis Reportes-->
         <scene sceneID="DDu-Rb-aMW">
             <objects>
-                <tableViewController id="URr-zb-Aam" customClass="ReportsTableViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="reportesLista" id="URr-zb-Aam" customClass="ReportsTableViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KUX-Ub-47s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -573,106 +573,122 @@
             <objects>
                 <viewController title="Detalle Reportes" id="Qtd-J6-jgg" customClass="DetalleReporteViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wtt-gM-6o9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de la vacuna:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv0-Om-OX2">
-                                <rect key="frame" x="20" y="66" width="172" height="21"/>
+                                <rect key="frame" x="20" y="154" width="172" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pfizer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yk3-ei-EhD">
-                                <rect key="frame" x="20" y="107" width="45" height="21"/>
+                                <rect key="frame" x="20" y="195" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de la ultima dosis:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXR-X4-mEQ">
-                                <rect key="frame" x="20" y="153" width="195" height="21"/>
+                                <rect key="frame" x="20" y="241" width="195" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01 enero del 1999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zve-xj-2nw">
-                                <rect key="frame" x="20" y="194" width="136.5" height="21"/>
+                                <rect key="frame" x="20" y="282" width="136.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. dosis:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWL-W1-uRx">
-                                <rect key="frame" x="255" y="153" width="79" height="21"/>
+                                <rect key="frame" x="255" y="241" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ym6-hs-W7M">
-                                <rect key="frame" x="258" y="194" width="10" height="21"/>
+                                <rect key="frame" x="258" y="282" width="10" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Efectos presentados por el paciente." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wY-GE-eoQ">
-                                <rect key="frame" x="20" y="240" width="291" height="21"/>
+                                <rect key="frame" x="20" y="328" width="291" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dolor de cabeza:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-9t-xz5">
-                                <rect key="frame" x="20" y="291" width="133.5" height="21"/>
+                                <rect key="frame" x="20" y="379" width="133.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fiebre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pu5-ks-QBD">
-                                <rect key="frame" x="20" y="342" width="55" height="21"/>
+                                <rect key="frame" x="20" y="430" width="55" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuerpo cortado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPN-c7-lch">
-                                <rect key="frame" x="20" y="393" width="130.5" height="21"/>
+                                <rect key="frame" x="20" y="481" width="130.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congestion nasal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wET-gu-vv8">
-                                <rect key="frame" x="20" y="444" width="142.5" height="21"/>
+                                <rect key="frame" x="20" y="532" width="142.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Dolor de cabeza" translatesAutoresizingMaskIntoConstraints="NO" id="pUv-Yk-OCM">
-                                <rect key="frame" x="320" y="286" width="51" height="31"/>
+                                <rect key="frame" x="320" y="374" width="51" height="31"/>
                             </switch>
                             <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fT1-Px-SXg">
-                                <rect key="frame" x="320" y="337" width="51" height="31"/>
+                                <rect key="frame" x="320" y="425" width="51" height="31"/>
                             </switch>
                             <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9CO-lZ-mUR">
-                                <rect key="frame" x="320" y="388" width="51" height="31"/>
+                                <rect key="frame" x="320" y="476" width="51" height="31"/>
                             </switch>
                             <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y0A-nM-9QX">
-                                <rect key="frame" x="320" y="439" width="51" height="31"/>
+                                <rect key="frame" x="320" y="527" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Otros síntomas descritos." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsZ-WG-25f">
-                                <rect key="frame" x="20" y="495" width="204.5" height="21"/>
+                                <rect key="frame" x="20" y="583" width="204.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Este es un espacio para que el usuario decriba otros sintomas que pueda haber presentado" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sLn-ef-gS9">
-                                <rect key="frame" x="20" y="536" width="374" height="252"/>
+                                <rect key="frame" x="20" y="624" width="374" height="169"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIM-WH-fH9">
-                                <rect key="frame" x="189.5" y="20" width="35" height="21"/>
+                                <rect key="frame" x="189.5" y="108" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHw-aJ-msO">
+                                <rect key="frame" x="58" y="741" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="saveRerpot:" destination="Qtd-J6-jgg" eventType="touchUpInside" id="KfB-SP-0HN"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ0-y4-lj4">
+                                <rect key="frame" x="251" y="741" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <action selector="cancelRaza:" destination="Qtd-J6-jgg" eventType="touchUpInside" id="PdW-qT-AaL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BDk-iS-5Gs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -717,15 +733,24 @@
                             <constraint firstItem="m5p-9t-xz5" firstAttribute="leading" secondItem="BDk-iS-5Gs" secondAttribute="leading" constant="20" id="vhU-rp-dlE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detalle reporte único" id="PaR-IM-ehz"/>
+                    <navigationItem key="navigationItem" title="Detalle reporte único" id="PaR-IM-ehz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Bhc-DK-6i9">
+                            <connections>
+                                <action selector="editAction:" destination="Qtd-J6-jgg" id="8xq-Ih-UDE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bodyAches" destination="9CO-lZ-mUR" id="xt3-AO-KZ8"/>
+                        <outlet property="cancelReportBtn" destination="kZ0-y4-lj4" id="azs-3V-PIa"/>
                         <outlet property="dateLastVac" destination="zve-xj-2nw" id="ipG-gJ-1wq"/>
+                        <outlet property="editBtn" destination="Bhc-DK-6i9" id="aaK-HQ-4eu"/>
                         <outlet property="fever" destination="fT1-Px-SXg" id="jyb-7m-oFy"/>
                         <outlet property="headache" destination="pUv-Yk-OCM" id="6s2-tT-gIo"/>
                         <outlet property="nasalCongestion" destination="y0A-nM-9QX" id="hqW-bn-d4r"/>
                         <outlet property="numberDose" destination="ym6-hs-W7M" id="upR-Ek-OGo"/>
                         <outlet property="other" destination="sLn-ef-gS9" id="YHR-aV-GIW"/>
+                        <outlet property="saveReportBtn" destination="sHw-aJ-msO" id="U3i-aX-Eav"/>
                         <outlet property="titleReport" destination="tIM-WH-fH9" id="uW0-hM-EvF"/>
                         <outlet property="vacName" destination="yk3-ei-EhD" id="8xO-yw-l0n"/>
                     </connections>
@@ -1111,7 +1136,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Cuc-xB-CPt"/>
         <segue reference="iJb-sG-22a"/>
         <segue reference="ZQm-mz-KDi"/>
         <segue reference="oua-1r-dVp"/>

@@ -50,6 +50,7 @@ class ReportsTableViewController: UITableViewController, UISearchResultsUpdating
         self.tableView.reloadData()
     }
     
+
     
     func updateGUI(){
 			reportController.fetchReports{(resultado) in

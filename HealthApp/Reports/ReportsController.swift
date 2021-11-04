@@ -105,4 +105,26 @@ class ReportsController {
 					}
 			}
 	}
+    
+    func updateReports (reporteActualizado: Report,completion: @escaping (Result<String,Error>)->Void){
+        
+        db.collection("reportes").document(reporteActualizado.id).updateData([
+                                                                            "nombre":reporteActualizado.nombre,
+                                                                            "nombre_vacuna":reporteActualizado.nombreVacuna,
+                                                                            "fechaUltimaVacuna":reporteActualizado.fechaUltimaVacuna,
+                                                                            "numeroDosis":reporteActualizado.numeroDosis,
+                                                                            "dolorCabeza":reporteActualizado.dolorCabeza,
+                                                                            "fiebre":reporteActualizado.fiebre,
+                                                                            "cuerpoCortado":reporteActualizado.cuerpoCortado,
+                                                                            "congestionNasal":reporteActualizado.congestionNasal,
+                                                                            "otro":reporteActualizado.otro,
+        ]){
+            err in
+            if let err = err {
+                completion(.failure(err))
+            }else{
+                completion(.success("Updated succesfuly"))
+            }
+        }
+    }
 }
