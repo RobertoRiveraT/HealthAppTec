@@ -109,7 +109,10 @@ class DetalleReporteViewController: UIViewController {
     @IBAction func cancelRaza(_ sender: UIButton) {
         editando = !editando
         buttons(editando: editando)
-    
+        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "homePage") as! UIViewController
+        nextViewController.modalPresentationStyle = .fullScreen
+        self.present(nextViewController, animated:true, completion:nil)
     }
     
     
