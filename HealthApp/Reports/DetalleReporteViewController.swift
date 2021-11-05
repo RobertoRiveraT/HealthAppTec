@@ -27,16 +27,6 @@ class DetalleReporteViewController: UIViewController {
     @IBOutlet var editBtn: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleReport.text = report?.nombre
-        vacName.text = report?.nombreVacuna
-        dateLastVac.text = report?.fechaUltimaVacuna
-        numberDose.text = String(report!.numeroDosis)
-        headache.setOn(report!.dolorCabeza, animated: true)
-        fever.setOn(report!.fiebre, animated: true)
-        bodyAches.setOn(report!.dolorCabeza, animated: true)
-        nasalCongestion.setOn(report!.congestionNasal, animated: true)
-        other.text = report?.otro
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,7 +36,7 @@ class DetalleReporteViewController: UIViewController {
         numberDose.text = String(report!.numeroDosis)
         headache.setOn(report!.dolorCabeza, animated: true)
         fever.setOn(report!.fiebre, animated: true)
-        bodyAches.setOn(report!.dolorCabeza, animated: true)
+        bodyAches.setOn(report!.cuerpoCortado, animated: true)
         nasalCongestion.setOn(report!.congestionNasal, animated: true)
         other.text = report?.otro
     }

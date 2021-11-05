@@ -20,7 +20,7 @@ struct Report: Codable {
                 case id = "id"
 				case nombre = "nombre"
 				case nombreVacuna = "nombre_vacuna"
-				case fechaUltimaVacuna = "fecha_ultima_vacuna"
+				case fechaUltimaVacuna = "fechaUltimaVacuna"
 				case numeroDosis = "numero_dosis"
 				case dolorCabeza = "dolorCabeza"
 				case fiebre = "fiebre"
@@ -59,15 +59,15 @@ struct Report: Codable {
     
     init(d:DocumentSnapshot){
         self.id = d.documentID
-        self.nombre = d.get("nombre") as? String ?? ""
-        self.nombreVacuna = d.get("nombre_vacuna") as? String ?? ""
-        self.fechaUltimaVacuna = d.get("fecha_utima_vacuna") as? String ?? ""
-        self.numeroDosis = d.get("numero_dosis") as? Int ?? 0
-        self.dolorCabeza = d.get("dolor_cabeza") as? Bool ?? false
-        self.fiebre = d.get("fiebre") as? Bool ?? false
-        self.cuerpoCortado = d.get("cuerpo_cortado") as? Bool ?? false
-        self.congestionNasal = d.get("congestion_nasal") as? Bool ?? false
-        self.otro = d.get("otro") as? String ?? ""
+        self.nombre = (d.get("nombre") as? String)!
+        self.nombreVacuna = (d.get("nombreVacuna") as? String)!
+        self.fechaUltimaVacuna = (d.get("fechaUltimaVacuna") as? String)!
+        self.numeroDosis = (d.get("numeroDosis") as? Int)!
+        self.dolorCabeza = (d.get("dolorCabeza") as? Bool)!
+        self.fiebre = (d.get("fiebre") as? Bool)!
+        self.cuerpoCortado = (d.get("cuerpoCortado") as? Bool)!
+        self.congestionNasal = (d.get("congestionNasal") as? Bool)!
+        self.otro = (d.get("otro") as? String)!
     }
 }
 

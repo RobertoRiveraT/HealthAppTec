@@ -43,7 +43,7 @@ class ReportsTableViewController: UITableViewController, UISearchResultsUpdating
             // Filtrar los resultados de acuerdo al texto escrito en la caja que es obtenido a través del parámetro $0
             //$0 es un objeto tipo Raza
             datosFiltrados = data.filter{
-                let s:String = $0.nombre
+                let s:String = $0.nombreVacuna + " " + $0.fechaUltimaVacuna
                 return(s.lowercased().contains(searchController.searchBar.text!.lowercased())) }
         }
         
@@ -94,7 +94,7 @@ class ReportsTableViewController: UITableViewController, UISearchResultsUpdating
         let cell = tableView.dequeueReusableCell(withIdentifier: "zelda", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = datosFiltrados[indexPath.row].nombre
+        cell.textLabel?.text = datosFiltrados[indexPath.row].nombreVacuna + ("\t") + datosFiltrados[indexPath.row].fechaUltimaVacuna
         return cell
     }
 

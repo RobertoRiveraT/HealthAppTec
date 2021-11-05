@@ -42,7 +42,7 @@ class ReportsController {
 			var ref: DocumentReference? = nil
 			ref = db.collection("reportes").addDocument(data: [
 					"nombre":nuevoReporte.nombre,
-					"nombre_vacuna":nuevoReporte.nombreVacuna,
+					"nombreVacuna":nuevoReporte.nombreVacuna,
 					"fechaUltimaVacuna":nuevoReporte.fechaUltimaVacuna,
 					"numeroDosis":nuevoReporte.numeroDosis,
 					"dolorCabeza":nuevoReporte.dolorCabeza,
