@@ -8,4 +8,5 @@ target 'HealthApp' do
   # Pods for HealthApp
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Database'
 end

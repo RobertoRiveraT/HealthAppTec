@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class RegisterViewController: UIViewController {
 
@@ -14,10 +15,14 @@ class RegisterViewController: UIViewController {
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var passwordTextField: UITextField!
     
+    @IBOutlet weak var nombreTextField: UITextField!
     
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -30,11 +35,39 @@ class RegisterViewController: UIViewController {
                 (result, error) in
                 
                 if let result = result, error == nil {
+                
+                    
+                    guard let userID = Auth.auth().currentUser?.uid else { return }
+                    
+                    let inputToSting: String = self.nombreTextField.text!
+                    
+                    let object: [String: Any] = [
+                        "Nombre": inputToSting as NSObject,
+                        "parametro2": "yes"
+                    ]
+                    
+                    self.ref = Database.database().reference()
+                    self.ref.child(userID).setValue(object)
+                    
+                    //Leer
+                    self.ref.child(userID).observeSingleEvent(of: .value, with: { snapshot in
+                        guard let value = snapshot.value as? [String: Any] else {
+                            return
+                        }
+                        
+                        print("Readed value: \(value)")
+                        print("Readed value first: \(value["Nombre"])")
+                    })
+                    
+                    print("Auth correct")
+                    print(inputToSting)
+                    print(userID)
                     print("Auth correct")
                     let storyBoard = UIStoryboard(name: "Main", bundle:nil)
                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "homePage") as! UITabBarController
                     nextViewController.modalPresentationStyle = .fullScreen
                     self.present(nextViewController, animated:true, completion:nil)
+                    
                 }else{
                     print("Auth failed")
                     let alertController = UIAlertController(title: "Error",
