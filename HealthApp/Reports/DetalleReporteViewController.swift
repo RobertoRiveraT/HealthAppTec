@@ -64,7 +64,8 @@ class DetalleReporteViewController: UIViewController {
     }
     
     
-    
+    //rob@rob.com
+    //123456
     
     @IBAction func saveRerpot(_ sender: UIButton) {
         editando = !editando

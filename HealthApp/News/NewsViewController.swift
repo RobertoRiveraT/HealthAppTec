@@ -8,23 +8,31 @@
 import UIKit
 
 class NewsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource  {
-    var data = [Noticia]()
-    var imgArr:[String] = []
+    var data = [Article]()
     var noticiaControlador = NoticiaControlador()
+    var noticiasContador = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        noticiaControlador.fetchNews{(resultado) in
-            switch resultado{
+//        noticiaControlador.fetchNews{(resultado) in
+//            switch resultado{
+//            case .success(let listaNoticias):
+//                self.data = listaNoticias
+//            case .failure(let err):
+//                self.displayError(err: err)
+//            }
+//        }
+        // Do any additional setup after loading the view.
+        APICaller.shared.getTopStories{ result in
+            switch result{
             case .success(let listaNoticias):
                 self.data = listaNoticias
-            case .failure(let err):
-                self.displayError(err: err)
+            case .failure(let error):
+                self.displayError(err: error)
             }
         }
-        // Do any additional setup after loading the view.
+        sleep(1)
     }
-
     
     func displayError(err: Error){
         DispatchQueue.main.async {
@@ -36,16 +44,15 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("Number of sections ", data.count)
-        return data.count
+        return self.data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsCollectionViewCell", for: indexPath) as! NewsCollectionViewCell
-        cell.fuente.text = self.data[indexPath.row].fuente
-        cell.titulo.text = self.data[indexPath.row].titulo
-        cell.destinyURL = self.data[indexPath.row].url
-        fetchImages(url: self.data[indexPath.row].imagen_url, imgView: cell.imagen)
+        cell.fuente.text = self.data[indexPath.row].source.name
+        cell.titulo.text = self.data[indexPath.row].title
+        cell.destinyURL = self.data[indexPath.row].url!
+        fetchImages(url: self.data[indexPath.row].urlToImage!, imgView: cell.imagen)
         return cell
     }
     
@@ -61,7 +68,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 let image = UIImage(data:data)
                 imgView.image = image
             }
-            
+
         }
         getDataTask.resume()
     }

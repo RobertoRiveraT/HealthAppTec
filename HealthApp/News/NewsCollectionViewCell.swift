@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class NewsCollectionViewCell: UICollectionViewCell {
     
     var destinyURL: String = "www.google.com"
@@ -19,4 +20,5 @@ class NewsCollectionViewCell: UICollectionViewCell {
 //        print(destinyURL)
         UIApplication.shared.open(URL(string: destinyURL)! as URL, options: [:], completionHandler: nil)
     }
+    
 }

@@ -6,7 +6,7 @@
 //
 
 struct Noticia: Codable {
-    let titulo, fuente, url, imagen_url:String
+    let titulo, fuente, url, imagen_url: String
 }
 
 typealias Noticias = [Noticia]
