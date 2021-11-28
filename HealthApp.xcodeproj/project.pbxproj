@@ -12,6 +12,7 @@
 		2C176277270BE414002A0AB3 /* ReportsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C176276270BE414002A0AB3 /* ReportsController.swift */; };
 		2C17627D270BF031002A0AB3 /* DetalleReporteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C17627C270BF031002A0AB3 /* DetalleReporteViewController.swift */; };
 		5DE3F977273350920071734C /* agregarReportesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3F976273350920071734C /* agregarReportesViewController.swift */; };
+		5DFFF65A2753F76F004CB73E /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFFF6592753F76F004CB73E /* Maps.swift */; };
 		A5529B2B27321C220010A7E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5529B2A27321C220010A7E6 /* LoginViewController.swift */; };
 		A5529B2E27321D4A0010A7E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5529B2D27321D4A0010A7E6 /* GoogleService-Info.plist */; };
 		A5529B432732280E0010A7E6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5529B422732280E0010A7E6 /* RegisterViewController.swift */; };
@@ -34,6 +35,7 @@
 		2C176276270BE414002A0AB3 /* ReportsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsController.swift; sourceTree = "<group>"; };
 		2C17627C270BF031002A0AB3 /* DetalleReporteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleReporteViewController.swift; sourceTree = "<group>"; };
 		5DE3F976273350920071734C /* agregarReportesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agregarReportesViewController.swift; sourceTree = "<group>"; };
+		5DFFF6592753F76F004CB73E /* Maps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
 		8868D2CF107D0E52A758486D /* Pods-HealthApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.release.xcconfig"; path = "Target Support Files/Pods-HealthApp/Pods-HealthApp.release.xcconfig"; sourceTree = "<group>"; };
 		91BD844DC836859ED9318E07 /* Pods_HealthApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5529B2A27321C220010A7E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				C50390D127051C6700CC7A6C /* Info.plist */,
 				A5529B2A27321C220010A7E6 /* LoginViewController.swift */,
 				A5529B422732280E0010A7E6 /* RegisterViewController.swift */,
+				5DFFF6592753F76F004CB73E /* Maps.swift */,
 				5DE3F976273350920071734C /* agregarReportesViewController.swift */,
 			);
 			path = HealthApp;
@@ -272,6 +275,7 @@
 				A5529B432732280E0010A7E6 /* RegisterViewController.swift in Sources */,
 				2C176274270BDCB6002A0AB3 /* Reports.swift in Sources */,
 				2C09D605270BFDF500B69C08 /* ReportsTableViewController.swift in Sources */,
+				5DFFF65A2753F76F004CB73E /* Maps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
