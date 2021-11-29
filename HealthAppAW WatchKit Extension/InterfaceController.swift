@@ -11,6 +11,8 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var mapaAW: WKInterfaceMap!
+    
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
     }
