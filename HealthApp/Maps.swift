@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import WatchConnectivity
 
 class Maps: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
@@ -15,10 +16,14 @@ class Maps: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet var getDirecctions: UIButton!
     @IBOutlet var map: MKMapView!
     
+    var session: WCSession?
+    
     var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupWatchSession()
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -31,11 +36,39 @@ class Maps: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         // Do any additional setup after loading the view.
     }
     
+    func setupWatchSession(){
+        if WCSession.isSupported() {
+            session = WCSession.default
+            session?.delegate = self
+            session?.activate()
+        }
+    }
+    
     @IBAction func getDirecctionsTapped(_ sender: Any) {
+        
+        print("test: Get Directions Tapped")
+        
+        if let validSession = self.session, validSession.isReachable {
+            let dataToWatch: [String: Any] = ["Phone": "Hola desde Iphone" as Any]
+            
+            sendDictionary(dataToWatch)
+            
+            validSession.sendMessage(dataToWatch, replyHandler: nil, errorHandler: nil)
+        }
+
         getAddress()
     }
     
+    private func sendDictionary(_ dict: [String: Any]) {
+            do {
+                try self.session?.updateApplicationContext(dict)
+            } catch {
+                print("Error sending dictionary \(dict) to Apple Watch!")
+            }
+    }
+    
     func getAddress(){
+        
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(textFieldAddress.text!) { (placemarks, erro) in
             guard let placemarks = placemarks, let location = placemarks.first?.location
@@ -89,4 +122,22 @@ class Maps: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         render.strokeColor = .blue
         return render
     }
+}
+
+extension Maps: WCSessionDelegate {
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("test: Activation did complete")    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        //
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("test: Activation did complete")
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        //
+    }
+    
 }
