@@ -27,6 +27,7 @@
 		C50390CB27051C6000CC7A6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50390C927051C6000CC7A6C /* Main.storyboard */; };
 		C50390CD27051C6700CC7A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50390CC27051C6700CC7A6C /* Assets.xcassets */; };
 		C50390D027051C6700CC7A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50390CE27051C6700CC7A6C /* LaunchScreen.storyboard */; };
+		C57366272756DBD600D4E065 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57366262756DBD600D4E065 /* ProfileViewController.swift */; };
 		C5852AC427554D410015BD1F /* HealthAppAW WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C5852AC327554D410015BD1F /* HealthAppAW WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C5852ACA27554D410015BD1F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5852AC827554D410015BD1F /* Interface.storyboard */; };
 		C5852ACC27554D470015BD1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5852ACB27554D470015BD1F /* Assets.xcassets */; };
@@ -105,6 +106,7 @@
 		C50390CC27051C6700CC7A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C50390CF27051C6700CC7A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C50390D127051C6700CC7A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C57366262756DBD600D4E065 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C5852AC027554D400015BD1F /* HealthAppAW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthAppAW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5852AC327554D410015BD1F /* HealthAppAW WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HealthAppAW WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5852AC927554D410015BD1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				A5529B422732280E0010A7E6 /* RegisterViewController.swift */,
 				5DFFF6592753F76F004CB73E /* Maps.swift */,
 				5DE3F976273350920071734C /* agregarReportesViewController.swift */,
+				C57366262756DBD600D4E065 /* ProfileViewController.swift */,
 			);
 			path = HealthApp;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				C50390C427051C6000CC7A6C /* AppDelegate.swift in Sources */,
 				2C176277270BE414002A0AB3 /* ReportsController.swift in Sources */,
 				C50390C627051C6000CC7A6C /* SceneDelegate.swift in Sources */,
+				C57366272756DBD600D4E065 /* ProfileViewController.swift in Sources */,
 				2C17627D270BF031002A0AB3 /* DetalleReporteViewController.swift in Sources */,
 				5DE3F977273350920071734C /* agregarReportesViewController.swift in Sources */,
 				A5F1CA9F270B571B00880013 /* NewsViewController.swift in Sources */,

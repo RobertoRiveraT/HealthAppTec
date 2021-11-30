@@ -787,7 +787,7 @@
         <!--Perfil-->
         <scene sceneID="s7h-Sr-00e">
             <objects>
-                <viewController id="pWg-ct-daQ" customClass="LoginViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pWg-ct-daQ" customClass="ProfileViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6bb-sd-GSf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -812,6 +812,10 @@
                                     <action selector="cerrarSesión:" destination="pWg-ct-daQ" eventType="touchUpInside" id="Zwo-0Y-EXO"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ImageBk" translatesAutoresizingMaskIntoConstraints="NO" id="ISk-Zd-HY8">
+                                <rect key="frame" x="20" y="333" width="374" height="296"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gmg-s9-I71"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -821,7 +825,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ay-Fr-ITK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="1515"/>
+            <point key="canvasLocation" x="1113.0434782608697" y="1514.7321428571429"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6x6-Q5-wKk">
@@ -1181,6 +1185,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Grafica" width="1126" height="680"/>
+        <image name="ImageBk" width="121" height="119"/>
         <image name="Mi cuenta-1" width="373" height="602"/>
         <image name="Overview-1" width="367" height="742"/>
         <image name="Overview-3" width="367" height="718"/>
