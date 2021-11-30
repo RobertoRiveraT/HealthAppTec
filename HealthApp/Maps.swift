@@ -126,7 +126,7 @@ class Maps: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
 extension Maps: WCSessionDelegate {
     func sessionDidBecomeInactive(_ session: WCSession) {
-        print("test: Activation did complete")    }
+        print("test: Session did become INACTIVE")    }
     
     func sessionDidDeactivate(_ session: WCSession) {
         //
