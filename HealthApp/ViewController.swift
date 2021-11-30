@@ -11,7 +11,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var imageview: UIImageView!
+    
+    
+@IBOutlet var imageview: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

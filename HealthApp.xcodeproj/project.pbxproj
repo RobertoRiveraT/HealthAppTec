@@ -12,6 +12,7 @@
 		2C176277270BE414002A0AB3 /* ReportsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C176276270BE414002A0AB3 /* ReportsController.swift */; };
 		2C17627D270BF031002A0AB3 /* DetalleReporteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C17627C270BF031002A0AB3 /* DetalleReporteViewController.swift */; };
 		5DE3F977273350920071734C /* agregarReportesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3F976273350920071734C /* agregarReportesViewController.swift */; };
+		5DFFF65A2753F76F004CB73E /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFFF6592753F76F004CB73E /* Maps.swift */; };
 		A5529B2B27321C220010A7E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5529B2A27321C220010A7E6 /* LoginViewController.swift */; };
 		A5529B2E27321D4A0010A7E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5529B2D27321D4A0010A7E6 /* GoogleService-Info.plist */; };
 		A5529B432732280E0010A7E6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5529B422732280E0010A7E6 /* RegisterViewController.swift */; };
@@ -26,8 +27,58 @@
 		C50390CB27051C6000CC7A6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50390C927051C6000CC7A6C /* Main.storyboard */; };
 		C50390CD27051C6700CC7A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50390CC27051C6700CC7A6C /* Assets.xcassets */; };
 		C50390D027051C6700CC7A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50390CE27051C6700CC7A6C /* LaunchScreen.storyboard */; };
+		C5852AC427554D410015BD1F /* HealthAppAW WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C5852AC327554D410015BD1F /* HealthAppAW WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C5852ACA27554D410015BD1F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5852AC827554D410015BD1F /* Interface.storyboard */; };
+		C5852ACC27554D470015BD1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5852ACB27554D470015BD1F /* Assets.xcassets */; };
+		C5852AD327554D470015BD1F /* HealthAppAW WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C5852AD227554D470015BD1F /* HealthAppAW WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C5852AD827554D470015BD1F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5852AD727554D470015BD1F /* InterfaceController.swift */; };
+		C5852ADA27554D470015BD1F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5852AD927554D470015BD1F /* ExtensionDelegate.swift */; };
+		C5852ADC27554D470015BD1F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5852ADB27554D470015BD1F /* ComplicationController.swift */; };
+		C5852ADE27554D4E0015BD1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5852ADD27554D4E0015BD1F /* Assets.xcassets */; };
 		E12DB0A1F11543CA8F225A58 /* Pods_HealthApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BD844DC836859ED9318E07 /* Pods_HealthApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5852AC527554D410015BD1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C50390B827051C6000CC7A6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5852AC227554D410015BD1F;
+			remoteInfo = "HealthAppAW WatchKit App";
+		};
+		C5852AD427554D470015BD1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C50390B827051C6000CC7A6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5852AD127554D470015BD1F;
+			remoteInfo = "HealthAppAW WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C5852AE227554D4E0015BD1F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C5852AC427554D410015BD1F /* HealthAppAW WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5852AE527554D4E0015BD1F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C5852AD327554D470015BD1F /* HealthAppAW WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2C09D604270BFDF500B69C08 /* ReportsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsTableViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +86,7 @@
 		2C176276270BE414002A0AB3 /* ReportsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsController.swift; sourceTree = "<group>"; };
 		2C17627C270BF031002A0AB3 /* DetalleReporteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleReporteViewController.swift; sourceTree = "<group>"; };
 		5DE3F976273350920071734C /* agregarReportesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agregarReportesViewController.swift; sourceTree = "<group>"; };
+		5DFFF6592753F76F004CB73E /* Maps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
 		8868D2CF107D0E52A758486D /* Pods-HealthApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.release.xcconfig"; path = "Target Support Files/Pods-HealthApp/Pods-HealthApp.release.xcconfig"; sourceTree = "<group>"; };
 		91BD844DC836859ED9318E07 /* Pods_HealthApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5529B2A27321C220010A7E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +105,17 @@
 		C50390CC27051C6700CC7A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C50390CF27051C6700CC7A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C50390D127051C6700CC7A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5852AC027554D400015BD1F /* HealthAppAW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthAppAW.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5852AC327554D410015BD1F /* HealthAppAW WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HealthAppAW WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5852AC927554D410015BD1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		C5852ACB27554D470015BD1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5852ACD27554D470015BD1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5852AD227554D470015BD1F /* HealthAppAW WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HealthAppAW WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5852AD727554D470015BD1F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		C5852AD927554D470015BD1F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		C5852ADB27554D470015BD1F /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		C5852ADD27554D4E0015BD1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5852ADF27554D4E0015BD1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8EFF4FBBF9202F9199759C /* Pods-HealthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.debug.xcconfig"; path = "Target Support Files/Pods-HealthApp/Pods-HealthApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +125,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E12DB0A1F11543CA8F225A58 /* Pods_HealthApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5852ACF27554D470015BD1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				C50390C227051C6000CC7A6C /* HealthApp */,
+				C5852AC727554D410015BD1F /* HealthAppAW WatchKit App */,
+				C5852AD627554D470015BD1F /* HealthAppAW WatchKit Extension */,
 				C50390C127051C6000CC7A6C /* Products */,
 				9BEE5832395D78A2B25F78E6 /* Pods */,
 				5FEA4EF695C6AADB29DB3286 /* Frameworks */,
@@ -122,6 +194,9 @@
 			isa = PBXGroup;
 			children = (
 				C50390C027051C6000CC7A6C /* HealthApp.app */,
+				C5852AC027554D400015BD1F /* HealthAppAW.app */,
+				C5852AC327554D410015BD1F /* HealthAppAW WatchKit App.app */,
+				C5852AD227554D470015BD1F /* HealthAppAW WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,9 +216,32 @@
 				C50390D127051C6700CC7A6C /* Info.plist */,
 				A5529B2A27321C220010A7E6 /* LoginViewController.swift */,
 				A5529B422732280E0010A7E6 /* RegisterViewController.swift */,
+				5DFFF6592753F76F004CB73E /* Maps.swift */,
 				5DE3F976273350920071734C /* agregarReportesViewController.swift */,
 			);
 			path = HealthApp;
+			sourceTree = "<group>";
+		};
+		C5852AC727554D410015BD1F /* HealthAppAW WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				C5852AC827554D410015BD1F /* Interface.storyboard */,
+				C5852ACB27554D470015BD1F /* Assets.xcassets */,
+				C5852ACD27554D470015BD1F /* Info.plist */,
+			);
+			path = "HealthAppAW WatchKit App";
+			sourceTree = "<group>";
+		};
+		C5852AD627554D470015BD1F /* HealthAppAW WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C5852AD727554D470015BD1F /* InterfaceController.swift */,
+				C5852AD927554D470015BD1F /* ExtensionDelegate.swift */,
+				C5852ADB27554D470015BD1F /* ComplicationController.swift */,
+				C5852ADD27554D4E0015BD1F /* Assets.xcassets */,
+				C5852ADF27554D4E0015BD1F /* Info.plist */,
+			);
+			path = "HealthAppAW WatchKit Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +266,57 @@
 			productReference = C50390C027051C6000CC7A6C /* HealthApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C5852ABF27554D400015BD1F /* HealthAppAW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5852AEA27554D4E0015BD1F /* Build configuration list for PBXNativeTarget "HealthAppAW" */;
+			buildPhases = (
+				C5852ABE27554D400015BD1F /* Resources */,
+				C5852AE227554D4E0015BD1F /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5852AC627554D410015BD1F /* PBXTargetDependency */,
+			);
+			name = HealthAppAW;
+			productName = HealthAppAW;
+			productReference = C5852AC027554D400015BD1F /* HealthAppAW.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		C5852AC227554D410015BD1F /* HealthAppAW WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5852AE927554D4E0015BD1F /* Build configuration list for PBXNativeTarget "HealthAppAW WatchKit App" */;
+			buildPhases = (
+				C5852AC127554D410015BD1F /* Resources */,
+				C5852AE527554D4E0015BD1F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5852AD527554D470015BD1F /* PBXTargetDependency */,
+			);
+			name = "HealthAppAW WatchKit App";
+			productName = "HealthAppAW WatchKit App";
+			productReference = C5852AC327554D410015BD1F /* HealthAppAW WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C5852AD127554D470015BD1F /* HealthAppAW WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5852AE827554D4E0015BD1F /* Build configuration list for PBXNativeTarget "HealthAppAW WatchKit Extension" */;
+			buildPhases = (
+				C5852ACE27554D470015BD1F /* Sources */,
+				C5852ACF27554D470015BD1F /* Frameworks */,
+				C5852AD027554D470015BD1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HealthAppAW WatchKit Extension";
+			productName = "HealthAppAW WatchKit Extension";
+			productReference = C5852AD227554D470015BD1F /* HealthAppAW WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -178,6 +327,15 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					C50390BF27051C6000CC7A6C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					C5852ABF27554D400015BD1F = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					C5852AC227554D410015BD1F = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					C5852AD127554D470015BD1F = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -196,6 +354,9 @@
 			projectRoot = "";
 			targets = (
 				C50390BF27051C6000CC7A6C /* HealthApp */,
+				C5852ABF27554D400015BD1F /* HealthAppAW */,
+				C5852AC227554D410015BD1F /* HealthAppAW WatchKit App */,
+				C5852AD127554D470015BD1F /* HealthAppAW WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -209,6 +370,30 @@
 				A5529B2E27321D4A0010A7E6 /* GoogleService-Info.plist in Resources */,
 				C50390CD27051C6700CC7A6C /* Assets.xcassets in Resources */,
 				C50390CB27051C6000CC7A6C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5852ABE27554D400015BD1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5852AC127554D410015BD1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5852ACC27554D470015BD1F /* Assets.xcassets in Resources */,
+				C5852ACA27554D410015BD1F /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5852AD027554D470015BD1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5852ADE27554D4E0015BD1F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,10 +461,34 @@
 				2C176274270BDCB6002A0AB3 /* Reports.swift in Sources */,
 				A5F6338527430D7C0077924E /* APICaller.swift in Sources */,
 				2C09D605270BFDF500B69C08 /* ReportsTableViewController.swift in Sources */,
+				5DFFF65A2753F76F004CB73E /* Maps.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5852ACE27554D470015BD1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5852ADA27554D470015BD1F /* ExtensionDelegate.swift in Sources */,
+				C5852AD827554D470015BD1F /* InterfaceController.swift in Sources */,
+				C5852ADC27554D470015BD1F /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5852AC627554D410015BD1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5852AC227554D410015BD1F /* HealthAppAW WatchKit App */;
+			targetProxy = C5852AC527554D410015BD1F /* PBXContainerItemProxy */;
+		};
+		C5852AD527554D470015BD1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5852AD127554D470015BD1F /* HealthAppAW WatchKit Extension */;
+			targetProxy = C5852AD427554D470015BD1F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C50390C927051C6000CC7A6C /* Main.storyboard */ = {
@@ -296,6 +505,14 @@
 				C50390CF27051C6700CC7A6C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C5852AC827554D410015BD1F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5852AC927554D410015BD1F /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -455,6 +672,110 @@
 			};
 			name = Release;
 		};
+		C5852AE027554D4E0015BD1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.HealthAppTecProject.HealthAppAW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C5852AE127554D4E0015BD1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.HealthAppTecProject.HealthAppAW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C5852AE327554D4E0015BD1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = HealthAppAW_WatchKit_Extension;
+				INFOPLIST_FILE = "HealthAppAW WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = mx.HealthAppTecProject.HealthAppAW.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		C5852AE427554D4E0015BD1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = HealthAppAW_WatchKit_Extension;
+				INFOPLIST_FILE = "HealthAppAW WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = mx.HealthAppTecProject.HealthAppAW.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		C5852AE627554D4E0015BD1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "HealthAppAW WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.HealthAppTecProject.HealthAppAW.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		C5852AE727554D4E0015BD1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "HealthAppAW WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.HealthAppTecProject.HealthAppAW.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -472,6 +793,33 @@
 			buildConfigurations = (
 				C50390D527051C6700CC7A6C /* Debug */,
 				C50390D627051C6700CC7A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5852AE827554D4E0015BD1F /* Build configuration list for PBXNativeTarget "HealthAppAW WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5852AE627554D4E0015BD1F /* Debug */,
+				C5852AE727554D4E0015BD1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5852AE927554D4E0015BD1F /* Build configuration list for PBXNativeTarget "HealthAppAW WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5852AE327554D4E0015BD1F /* Debug */,
+				C5852AE427554D4E0015BD1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5852AEA27554D4E0015BD1F /* Build configuration list for PBXNativeTarget "HealthAppAW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5852AE027554D4E0015BD1F /* Debug */,
+				C5852AE127554D4E0015BD1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
