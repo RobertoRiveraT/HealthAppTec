@@ -51,16 +51,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func cerrarSesión(_ sender: UIButton) {
-        print((Auth.auth().currentUser?.email)! )
-        try? Auth.auth().signOut()
-        print(Auth.auth().currentUser)
-        
-        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "loginView") as! UIViewController
-        nextViewController.modalPresentationStyle = .fullScreen
-        self.present(nextViewController, animated:true, completion:nil)
-    }
+    
     /*
     // MARK: - Navigation
 
