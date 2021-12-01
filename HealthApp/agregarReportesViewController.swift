@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Vision
 
-class agregarReportesViewController: UIViewController {
+class agregarReportesViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
    let reporteControlador = ReportsController()
     
@@ -29,7 +30,10 @@ class agregarReportesViewController: UIViewController {
     
     @IBOutlet weak var otroEf: UITextView!
     
-    
+//	Para la galeria
+	@IBOutlet weak var camaraBtn: UIButton!
+	private let miPicker = UIImagePickerController()
+	
     
 	@IBAction func crearReporte(_ sender: UIButton) {
 		let nuevoReporte = Report(nombre: nombreR.text!, nombreVacuna: vacunaNomb.text!, fechaUltimaVacuna: fecha.text!, numeroDosis: Int(numDosis.text!)!, dolorCabeza: dolorCabeza.isOn, fiebre: fiebre.isOn, cuerpoCortado: cuerpoCortado.isOn, congestionNasal: Congnasal.isOn, otro:otroEf.text!)
@@ -72,11 +76,76 @@ class agregarReportesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+			if !UIImagePickerController.isSourceTypeAvailable(.camera){
+				camaraBtn.isHidden = true
+			}
+			miPicker.delegate = self
         
         // Do any additional setup after loading the view.
     }
     
+	
+	
+	@IBAction func openCamera(_ sender: UIButton) {
+		miPicker.sourceType = UIImagePickerController.SourceType.camera
+		
+		present(miPicker, animated: true, completion: nil)
+		
+	}
+	
+	
+	@IBAction func openGalery(_ sender: UIButton) {
+		miPicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+		present(miPicker, animated: true, completion: nil)
+	}
+	
+	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+		
+		picker.dismiss(animated: true, completion: nil)
+		print("Calling recognize text")
+		recognizeText(image: info[UIImagePickerController.InfoKey.originalImage] as? UIImage)
+	}
+	
+	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+		picker.dismiss(animated: true, completion: nil)
+	}
+	
+	
+	
+	private func recognizeText(image: UIImage?){
+		guard let cgImage = image?.cgImage else {return}
+		// Handler
+		let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+		// Request
+		let request = VNRecognizeTextRequest {request, error in
+			guard let observations = request.results as? [VNRecognizedTextObservation],
+						error == nil else{
+				return
+			}
+			
+			// Version 1
+			//print(observations.compactMap({$0.topCandidates(1).first?.string}))
+			//print("vacuna")
+			//print(observations.compactMap({$0.topCandidates(1).first?.string})[27])
+			self.vacunaNomb.text = observations.compactMap({$0.topCandidates(1).first?.string})[27]
+			//print("fecha")
+			//print(observations.compactMap({$0.topCandidates(1).first?.string})[21])
+			self.fecha.text = observations.compactMap({$0.topCandidates(1).first?.string})[21]
+			//print("nombre")
+			//print(observations.compactMap({$0.topCandidates(1).first?.string})[13])
+			self.numDosis.text = observations.compactMap({$0.topCandidates(1).first?.string})[13]
+
+			
+			// Version 2
+			
+		}
+		// Processs
+		do {
+			try handler.perform([request])
+		} catch {
+			print(error)
+		}
+	}
 
     /*
     // MARK: - Navigation
