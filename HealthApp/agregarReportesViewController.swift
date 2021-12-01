@@ -123,21 +123,88 @@ class agregarReportesViewController: UIViewController, UIImagePickerControllerDe
 				return
 			}
 			
+			let extratedText = observations.compactMap({$0.topCandidates(1).first?.string}).joined(separator: ", ")
+			
 			// Version 1
 			//print(observations.compactMap({$0.topCandidates(1).first?.string}))
 			//print("vacuna")
 			//print(observations.compactMap({$0.topCandidates(1).first?.string})[27])
-			self.vacunaNomb.text = observations.compactMap({$0.topCandidates(1).first?.string})[27]
+			//self.vacunaNomb.text = observations.compactMap({$0.topCandidates(1).first?.string})[27]
 			//print("fecha")
 			//print(observations.compactMap({$0.topCandidates(1).first?.string})[21])
-			self.fecha.text = observations.compactMap({$0.topCandidates(1).first?.string})[21]
+			//self.fecha.text = observations.compactMap({$0.topCandidates(1).first?.string})[21]
 			//print("nombre")
 			//print(observations.compactMap({$0.topCandidates(1).first?.string})[13])
-			self.numDosis.text = observations.compactMap({$0.topCandidates(1).first?.string})[13]
+			//self.numDosis.text = observations.compactMap({$0.topCandidates(1).first?.string})[13]
 
-			
 			// Version 2
+			//print(extratedText)
 			
+			// Dosis
+			if (extratedText.range(of: "1") != nil){
+				self.numDosis.text = "1"
+			}
+			if (extratedText.range(of: "2") != nil){
+				self.numDosis.text = "2"
+			}
+			
+			
+			// Fecha
+			let range = NSRange(location: 0, length: extratedText.utf16.count)
+			let regex = try! NSRegularExpression(pattern: "[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]")
+			
+	
+			let posibleDate = regex.matches(in: extratedText, options: [], range: range)
+			
+			for match in posibleDate {
+					// what will be the code
+//					let range = match.range
+					let matchString = (extratedText as NSString).substring(with: match.range) as String
+//					print("match is \(range) \(matchString)")
+				self.fecha.text = matchString
+				
+				break;
+			}
+			
+			// Vacuna
+			
+			if (extratedText.range(of: "pfizer", options: .caseInsensitive) != nil){
+				self.vacunaNomb.text = "Pfizer"
+			}
+			
+			if (extratedText.range(of: "sputnik", options: .caseInsensitive) != nil){
+				self.vacunaNomb.text = "Sputnik V"
+			}
+			
+			if (extratedText.range(of: "cansino", options: .caseInsensitive) != nil){
+				self.vacunaNomb.text = "CanSino"
+			}
+			
+			if (extratedText.range(of: "coronavac", options: .caseInsensitive) != nil){
+				self.vacunaNomb.text = "CoronaVac"
+			}
+			
+			if (extratedText.range(of: "covaxin", options: .caseInsensitive) != nil){
+				self.vacunaNomb.text = "Covaxin"
+			}
+			
+			if (extratedText.range(of: "jhonson", options: .caseInsensitive) != nil){
+				self.vacunaNomb.text = "Jhonson & Jhonson"
+			}
+			
+			if (extratedText.range(of: "moderna", options: .caseInsensitive) != nil){
+				self.vacunaNomb.text = "Moderna"
+			}
+			
+			if (extratedText.range(of: "astrazeneca", options: .caseInsensitive) != nil){
+				self.vacunaNomb.text = "AstraZeneca"
+			}
+			
+			if (extratedText.range(of: "sinopharm", options: .caseInsensitive) != nil){
+				self.vacunaNomb.text = "Sinopharm"
+			}
+			
+		
 		}
 		// Processs
 		do {
@@ -146,6 +213,8 @@ class agregarReportesViewController: UIViewController, UIImagePickerControllerDe
 			print(error)
 		}
 	}
+	
+	
 
     /*
     // MARK: - Navigation

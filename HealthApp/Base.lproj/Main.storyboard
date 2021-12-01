@@ -541,6 +541,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPo-tJ-5J8">
+                                <rect key="frame" x="309" y="55" width="62" height="30"/>
+                                <state key="normal" title="Regresar"/>
+                                <connections>
+                                    <segue destination="bey-uk-NJx" kind="presentation" modalPresentationStyle="fullScreen" id="YDf-CI-IXS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Txt-8C-D2B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -549,6 +556,7 @@
                             <constraint firstItem="XWV-za-R7e" firstAttribute="trailing" secondItem="2ve-Fn-S9g" secondAttribute="trailingMargin" id="7RU-GF-mLS"/>
                             <constraint firstItem="vBf-M0-2pq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BRp-nV-bwK" secondAttribute="trailing" constant="8" symbolic="YES" id="7V7-LM-VoU"/>
                             <constraint firstItem="Txt-8C-D2B" firstAttribute="trailing" secondItem="vBf-M0-2pq" secondAttribute="trailing" constant="30" id="JtB-8p-jZd"/>
+                            <constraint firstItem="lPo-tJ-5J8" firstAttribute="leading" secondItem="vDd-bg-z55" secondAttribute="trailing" constant="62" id="L5i-Og-KNc"/>
                             <constraint firstItem="vBf-M0-2pq" firstAttribute="top" secondItem="Txt-8C-D2B" secondAttribute="top" constant="20" id="MUS-Ow-umQ"/>
                             <constraint firstItem="XWV-za-R7e" firstAttribute="bottom" secondItem="Txt-8C-D2B" secondAttribute="bottom" id="RSs-iL-MRs"/>
                             <constraint firstItem="BRp-nV-bwK" firstAttribute="top" secondItem="vBf-M0-2pq" secondAttribute="top" id="VKz-dX-utg"/>
@@ -556,6 +564,7 @@
                             <constraint firstItem="vDd-bg-z55" firstAttribute="baseline" secondItem="BRp-nV-bwK" secondAttribute="baseline" id="Z4y-N4-ngk"/>
                             <constraint firstItem="BRp-nV-bwK" firstAttribute="leading" secondItem="XWV-za-R7e" secondAttribute="leading" id="fSO-e4-gqb"/>
                             <constraint firstItem="XWV-za-R7e" firstAttribute="top" secondItem="BRp-nV-bwK" secondAttribute="bottom" constant="34" id="qa3-eK-86Y"/>
+                            <constraint firstItem="lPo-tJ-5J8" firstAttribute="top" secondItem="vBf-M0-2pq" secondAttribute="bottom" constant="5" id="zBM-lk-DcX"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1215,6 +1224,7 @@
         <segue reference="iJb-sG-22a"/>
         <segue reference="ZQm-mz-KDi"/>
         <segue reference="oua-1r-dVp"/>
+        <segue reference="YDf-CI-IXS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Grafica" width="1126" height="680"/>
