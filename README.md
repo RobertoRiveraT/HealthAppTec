@@ -1,6 +1,6 @@
 # HealthAppTec
 
-This iOS application was developed as part of the **Aplicaciones Móviles** course during 2021. The project showcases basic functionality for fetching information from remote services and interacting with Firebase for authentication.
+This iOS application was developed as part of the **Moblie Aplications** course during 2021. The project showcases basic functionality for fetching information from remote services and interacting with Firebase for authentication.
 
 ## Features
 
