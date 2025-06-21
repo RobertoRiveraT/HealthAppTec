@@ -2,6 +2,10 @@
 
 This iOS application was developed as part of the **Moblie Aplications** course during 2021. The project showcases basic functionality for fetching information from remote services and interacting with Firebase for authentication.
 
+## Video Presentation
+
+### Watch [here](https://drive.google.com/file/d/1T5zydyz6LAucbziDYXPAlQANBHNCTmL3/view?usp=sharing)
+
 ## Features
 
 - **Onboarding**: Several introductory screens guide the user through the main purpose of the app.
